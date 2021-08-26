@@ -12,17 +12,30 @@ package nu.te4.building_task;
 public class Start {
       public static void main(String[] args){
       
-          House home = new House();
-          School darkness = new School();
+            House home = new House();
+            School darkness = new School();
           
-          System.out.println(home);
-          System.out.println(darkness);
-      
-      
-      
-      
-      
-      
+            Rottweiler dogo = new Rottweiler();
+            Dobberman dogy = new Dobberman();
+            
+            System.out.println("");
+            System.out.println("");
+            
+            dogo.bark();
+            dogo.eat();
+            dogo.guard();
+            dogo.sleep();
+            
+            System.out.println("");
+            System.out.println("");
+            
+            dogy.bark();
+            dogy.eat();
+            dogy.guard();
+            dogy.sleep();
+            
+            System.out.println("");
+            System.out.println("");
       
       }
 }

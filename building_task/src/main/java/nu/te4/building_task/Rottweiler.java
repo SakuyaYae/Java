@@ -9,18 +9,17 @@ package nu.te4.building_task;
  *
  * @author Elev
  */
-public class Dobberman extends Dog implements IGuardable{
+public class Rottweiler extends Dog implements IGuardable{
+    public Rottweiler(){
+    super.Breed = "Rottweiler";
     
-    
-    public Dobberman(){
-        super.Breed = "Dobberman";
     }
 
     @Override
     public void guard() {
-       System.out.println(String.format(Breed + " is guarding"));
+        System.out.println(String.format(Breed + " is guarding"));
     }
-    
+
     @Override
     public void bark() {
         System.out.println(String.format(Breed + " barks"));

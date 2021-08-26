@@ -18,10 +18,10 @@ public abstract class Dog {
     }
     
     public void eat(){
-        System.out.println(String.format(Breed, " Eats"));
+        System.out.println(String.format(Breed + " Eats"));
     }
     
-     public void sleeps(){
-        System.out.println(String.format(Breed, " Sleeps"));
+     public void sleep(){
+        System.out.println(String.format(Breed + " Sleeps"));
     }
 }
