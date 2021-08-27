@@ -18,21 +18,20 @@ public class Start {
             Rottweiler dogo = new Rottweiler();
             Dobberman dogy = new Dobberman();
             
-            System.out.println("");
-            System.out.println("");
+            Rektangel Tim = new Rektangel(60,30);
+            Rektangel Sakura = new Rektangel(4,44);
             
-            dogo.bark();
-            dogo.eat();
-            dogo.guard();
-            dogo.sleep();
+            
             
             System.out.println("");
             System.out.println("");
             
-            dogy.bark();
-            dogy.eat();
-            dogy.guard();
-            dogy.sleep();
+            System.out.println(String.format("the area of tim is: %d", Tim.area()));
+            
+            System.out.println("");
+            System.out.println("");
+            
+            System.out.println(String.format("the area of Sakura is: %d", Sakura.area()));
             
             System.out.println("");
             System.out.println("");
