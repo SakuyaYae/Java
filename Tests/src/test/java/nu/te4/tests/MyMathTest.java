@@ -4,37 +4,39 @@
  * and open the template in the editor.
  */
 package nu.te4.tests;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import testarjunit.MyMath;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.Rule;
+import org.junit.rules.ExpectedException;
 
 /**
  *
- * @author Samme
+ * @author SakuyaYae
  */
 public class MyMathTest {
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
     
     public MyMathTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    @BeforeEach
+    @Before
     public void setUp() {
     }
     
-    @AfterEach
+    @After
     public void tearDown() {
     }
 
@@ -44,14 +46,25 @@ public class MyMathTest {
     @Test
     public void testAdd() {
         System.out.println("add");
-        String a = "";
-        String b = "";
+        String a = "12";
+        String b = "12";
         MyMath instance = new MyMath();
-        int expResult = 0;
+        int expResult = 24;
         int result = instance.add(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+    }
+    
+    @Test
+    public void testAdd_Exception(){
+        System.out.println("add exceptions");
+        exception.expect(NumberFormatException.class);
+        exception.expectMessage("Du måste ha siffror");
+        String a = "fyra";
+        String b = "två";
+        MyMath instance = new MyMath();
+        instance.difference(a, b);
+        instance.add(a, b);
     }
 
     /**
@@ -63,11 +76,9 @@ public class MyMathTest {
         int a = 0;
         int b = 0;
         MyMath instance = new MyMath();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.isEqual(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -76,14 +87,12 @@ public class MyMathTest {
     @Test
     public void testDifference_int_int() {
         System.out.println("difference");
-        int a = 0;
-        int b = 0;
+        int a = 4;
+        int b = 2;
         MyMath instance = new MyMath();
-        int expResult = 0;
+        int expResult = 2;
         int result = instance.difference(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -92,14 +101,13 @@ public class MyMathTest {
     @Test
     public void testDifference_String_String() {
         System.out.println("difference");
-        String a = "";
-        String b = "";
+        String a = "2";
+        String b = "4";
         MyMath instance = new MyMath();
-        int expResult = 0;
+        int expResult = 2;
         int result = instance.difference(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
+ 
