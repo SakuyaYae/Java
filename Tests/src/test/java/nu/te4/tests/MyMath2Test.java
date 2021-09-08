@@ -11,8 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
+import nu.te4.tests.MyMath2;
 
 
 /**
@@ -66,5 +65,4 @@ public class MyMath2Test {
         int result = instance.compareTo(a, b);
         assertEquals(expResult, result);
     }
-    
 }
