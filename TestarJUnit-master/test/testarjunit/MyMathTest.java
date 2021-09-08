@@ -62,8 +62,9 @@ public class MyMathTest {
         exception.expect(NumberFormatException.class);
         exception.expectMessage("Du måste ha siffror");
         String a = "fyra";
-        String b = "noll";
+        String b = "två";
         MyMath instance = new MyMath();
+        instance.difference(a, b);
         instance.add(a, b);
     }
 
@@ -87,8 +88,8 @@ public class MyMathTest {
     @Test
     public void testDifference_int_int() {
         System.out.println("difference");
-        int a = 2;
-        int b = 4;
+        int a = 4;
+        int b = 2;
         MyMath instance = new MyMath();
         int expResult = 2;
         int result = instance.difference(a, b);
@@ -101,8 +102,8 @@ public class MyMathTest {
     @Test
     public void testDifference_String_String() {
         System.out.println("difference");
-        String a = "4";
-        String b = "2";
+        String a = "2";
+        String b = "4";
         MyMath instance = new MyMath();
         int expResult = 2;
         int result = instance.difference(a, b);
@@ -110,3 +111,4 @@ public class MyMathTest {
     }
     
 }
+ 
