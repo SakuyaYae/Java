@@ -23,11 +23,18 @@ public class MyMath2 {
     public int compareTo(int a, int b){
         
         //om a > b --> 1
-        
+        if(a > b){
+        return 1;
+        }
         //om a == b --> 0
-        
+        else if(a == b){
+        return 0;
+        }
         //om a < b --> -1
-        return 0; 
+        else{
+        return (-1);
+        }
+        
     }
     
 }
