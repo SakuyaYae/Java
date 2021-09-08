@@ -27,33 +27,48 @@ public class MyMath {
     }
     
     public int difference(int a, int b){
-        //skillnaden mellan a och b;
+        
         int res = 0;
         if(a == 4){
-           res = a / b;
+           res = a - b;
            
             
         }
-        //om a = 4 och b = 2 -> 2
+        
         if(b == 4){
-         res = b / a;
+         res = b - a;
         }    
-        // 2 och b = 4 -> 2  
+         
         return res;
     }
     
     public int difference(String a,String b){
-        //skillnaden mellan a och b; 
         
-        //om a = 4 och b = 2 -> 2
+        int res = 0;
         
-        //om a = 2 och b = 4 -> 2
         
-        //talen skall även parsas 
+           int tal1, tal2; 
+        try {
+            tal1 = Integer.parseInt(a);
+            tal2 = Integer.parseInt(b);
+            
+            
+             
+        if(tal1 == 4){
+           res = tal1 - tal2;
+           
+            
+        }
         
-        //Fel förväntas om man lägger in fel.
-        
-        return 0;
+        if(tal2 == 4){
+         res = tal2 - tal1;
+        }    
+         
+        return res;
+
+        } catch (Exception e) { //Vilket exceptions är det vi får här? kan förbättras.
+            throw new NumberFormatException("Du måste ha siffror");
+        }
     }
 
 }

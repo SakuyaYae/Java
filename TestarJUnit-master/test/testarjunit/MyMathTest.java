@@ -16,7 +16,7 @@ import org.junit.rules.ExpectedException;
 
 /**
  *
- * @author Elev
+ * @author SakuyaYae
  */
 public class MyMathTest {
     @Rule
