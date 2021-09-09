@@ -12,6 +12,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import nu.te4.tests.MyMath2;
+import org.junit.Rule;
+import org.junit.rules.ExpectedException;
 
 
 /**
@@ -19,7 +21,8 @@ import nu.te4.tests.MyMath2;
  * @author Samme
  */
 public class MyMath2Test {
-    
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
     public MyMath2Test() {
     }
     
@@ -51,13 +54,15 @@ public class MyMath2Test {
         double result = instance.convertToFarenheit(c);
         assertEquals(expResult, result, 0.0);
     }
+    
    @Test
-    public void testNull(){
-        System.out.println("IsNull");
-        Check check = new Check();
-        assertThrows(IllegalArgumentException.class, ()->{
-            check.IsPalindrome(null);
-                    });
+    public void testError(){
+            System.out.println("add exceptions");
+        exception.expect(NumberFormatException.class);
+        exception.expectMessage("Du måste ha siffror");
+        MyMath2 instance = new MyMath2();
+        instance.convertToFarenheit(280.0);
+    
     }
     /**
      * Test of compareTo method, of class MyMath2.
@@ -72,6 +77,7 @@ public class MyMath2Test {
         int result = instance.compareTo(a, b);
         assertEquals(expResult, result);
     }
+    
     @Test
     public void testCompareTo_alt() {
         System.out.println("compareTo");
@@ -82,6 +88,7 @@ public class MyMath2Test {
         int result = instance.compareTo(a, b);
         assertEquals(expResult, result);
     }
+    
     @Test
     public void testCompareTo_alternet() {
         System.out.println("compareTo");
