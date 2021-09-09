@@ -51,17 +51,44 @@ public class MyMath2Test {
         double result = instance.convertToFarenheit(c);
         assertEquals(expResult, result, 0.0);
     }
-
+   @Test
+    public void testNull(){
+        System.out.println("IsNull");
+        Check check = new Check();
+        assertThrows(IllegalArgumentException.class, ()->{
+            check.IsPalindrome(null);
+                    });
+    }
     /**
      * Test of compareTo method, of class MyMath2.
      */
     @Test
     public void testCompareTo() {
         System.out.println("compareTo");
+        int a = 44;
+        int b = 0;
+        MyMath2 instance = new MyMath2();
+        int expResult = 1;
+        int result = instance.compareTo(a, b);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testCompareTo_alt() {
+        System.out.println("compareTo");
         int a = 0;
         int b = 0;
         MyMath2 instance = new MyMath2();
         int expResult = 0;
+        int result = instance.compareTo(a, b);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testCompareTo_alternet() {
+        System.out.println("compareTo");
+        int a = 0;
+        int b = 4;
+        MyMath2 instance = new MyMath2();
+        int expResult = -1;
         int result = instance.compareTo(a, b);
         assertEquals(expResult, result);
     }

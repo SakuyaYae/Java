@@ -43,9 +43,9 @@ public class CheckTest {
     @Test
     public void testIsPalindrome() {
         System.out.println("IsPalindrome");
-        String input = "sax";
+        String input = "sas";
         Check instance = new Check();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.IsPalindrome(input);
         assertEquals(expResult, result);
         
@@ -55,7 +55,44 @@ public class CheckTest {
     public void testNull(){
         System.out.println("IsNull");
         Check check = new Check();
-        assertThrows(IllegalArgumentException.class, ()->{check.IsPalindrome(null)});
+        assertThrows(IllegalArgumentException.class, ()->{
+            check.IsPalindrome(null);
+                    });
+    
+    }
+    
+    
+    @Test
+    public void testNotPalindrome(){
+        System.out.println("IsNull");
+        Check check = new Check();
+        assertEquals(check.IsPalindrome("NOT"), false);
+    }
+
+    /**
+     * Test of isPrimeNumber method, of class Check.
+     */
+    @Test
+    public void testIsPrimeNumber() {
+        System.out.println("isPrimeNumber");
+        Check instance = new Check();
+        assertEquals(instance.isPrimeNumber(3), true);
+        
+    }
+    
+    @Test
+    public void testNotPrimeNumber(){
+        System.out.println("IsNull");
+        Check check = new Check();
+        assertEquals(check.isPrimeNumber(8), false);
+    }
+    @Test
+    public void testOOR(){
+        System.out.println("IsOOR");
+        Check check = new Check();
+        assertThrows(IllegalArgumentException.class, ()->{
+            check.isPrimeNumber(-1);
+                    });
     
     }
 }
