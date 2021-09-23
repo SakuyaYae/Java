@@ -10,10 +10,16 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Elev
+ * @author SakuyaYae
  */
 public class ConnectionFactory {
     
+    /**
+     *
+     * @return a conection to a local database
+     * @throws ClassNotFoundException can not find classes that is needed
+     * @throws SQLException sql errors
+     */
     public static Connection getconnection() throws ClassNotFoundException, SQLException{
         String user = "root";
         String pssword = "";

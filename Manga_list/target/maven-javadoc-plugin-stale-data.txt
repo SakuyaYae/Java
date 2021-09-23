@@ -1,0 +1,57 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/Elev/.m2/repository/javax/javaee-api/8.0/javaee-api-8.0.jar;C:/Users/Elev/.m2/repository/com/sun/mail/javax.mail/1.6.0/javax.mail-1.6.0.jar;C:/Users/Elev/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar;C:/Users/Elev/.m2/repository/mysql/mysql-connector-java/5.1.49/mysql-connector-java-5.1.49.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Manga_list-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/Elev/Documents/GitHub/Java/Manga_list/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Manga_list-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+nu.te4.manga_list.beans
+nu.te4.manga_list
+nu.te4.manga_list.entities
+nu.te4.manga_list.resources
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/beans/MangaBean.java'
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/ConnectionFactory.java'
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/entities/Manga.java'
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/JAXRSConfiguration.java'
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/resources/JavaEE8Resource.java'
+'C:/Users/Elev/Documents/GitHub/Java/Manga_list/src/main/java/nu/te4/manga_list/resources/Mangaresource.java'
+C:\Users\Elev\.m2\repository\javax\javaee-api\8.0\javaee-api-8.0.jar = 1629370547008
+C:\Users\Elev\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar = 1629370546932
+C:\Users\Elev\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar = 1629370546869
+C:\Users\Elev\.m2\repository\mysql\mysql-connector-java\5.1.49\mysql-connector-java-5.1.49.jar = 1629374216872
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\src\main\java = 1629891124280
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\allclasses-frame.html = 1632386233293
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\allclasses-noframe.html = 1632386233294
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\constant-values.html = 1632386233198
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\deprecated-list.html = 1632386233291
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\help-doc.html = 1632386233302
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\index-all.html = 1632386233286
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\index.html = 1632386233296
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\overview-frame.html = 1632386233150
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\overview-summary.html = 1632386233298
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\overview-tree.html = 1632386233274
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\package-list = 1632386233148
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\script.js = 1632386233303
+C:\Users\Elev\Documents\GitHub\Java\Manga_list\target\site\apidocs\stylesheet.css = 1632384827882
