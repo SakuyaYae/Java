@@ -7,32 +7,57 @@ package nu.te4.manga_list.entities;
 
 /**
  *
- * @author Elev
+ * @author SakuyaYae
  */
 public class Manga {
     private String author;
     private String title;
     
+    /**
+     *
+     */
     public Manga(){
     }
     
-    
+    /**
+     *
+     * @param author The name of a author
+     * @param title The titel of a manga
+     */
     public Manga(String author, String title){
         this.author = author;
         this.title = title;
         }
     
-     public String getAuthor(){
+    /**
+     *
+     * @return authors name
+     */
+    public String getAuthor(){
             return author;
     }
-     public void setAuthor(String author){
+
+    /**
+     *
+     * @param author The name of a author
+     */
+    public void setAuthor(String author){
         this.author = author;
      
      }
     
-     public String getTitle(){
+    /**
+     *
+     * @return the title of manga
+     */
+    public String getTitle(){
             return title;
     }
+
+    /**
+     *
+     * @param title The titel of a manga
+     */
     public void setTitle(String title){
         this.title = title;
      //

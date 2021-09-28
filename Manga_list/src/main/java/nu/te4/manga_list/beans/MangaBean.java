@@ -16,10 +16,15 @@ import nu.te4.manga_list.entities.Manga;
 
 /**
  *
- * @author Elev
+ * @author SakuyaYae
  */
 @Stateless
 public class MangaBean {
+
+    /**
+     *
+     * @return a Arraylist of Manga stored in the datbase
+     */
     public List<Manga> getManga(){
         List<Manga> MangaList = new ArrayList<>();
         try(Connection con = ConnectionFactory.getconnection()){
@@ -39,6 +44,12 @@ public class MangaBean {
         }
         return MangaList;
     }
+
+    /**
+     *
+     * @param manga a object that represents what manga is
+     * @return true if a insert statment is suscsesfuly done
+     */
     public boolean postManga(Manga manga){
         boolean success = false;
     try(Connection con = ConnectionFactory.getconnection()){

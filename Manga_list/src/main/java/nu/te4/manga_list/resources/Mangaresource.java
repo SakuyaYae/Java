@@ -19,7 +19,7 @@ import nu.te4.manga_list.entities.Manga;
 
 /**
  *
- * @author Elev
+ * @author SakuyaYae
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Path("manga")
@@ -30,6 +30,10 @@ public class Mangaresource {
     @EJB
     MangaBean mangabean;
     
+    /**
+     *
+     * @return a list of manga if it contains content or nocontent if it is emty
+     */
     @GET
     public Response getManga(){
         List<Manga> manga = mangabean.getManga();
@@ -45,6 +49,11 @@ public class Mangaresource {
         }
     }
     
+    /**
+     *
+     * @param manga a object that represents what manga is
+     * @return ether a status sucsses if the post goes well or a server error if somthing goes wrong
+     */
     @POST
     public Response postManga(Manga manga){
         if(mangabean.postManga(manga)){
