@@ -22,9 +22,10 @@ public class Soldier {
         this.name = gen.getName();
         this.health = gen.getHealth();
         this.age = gen.getAge();
-        this.armors = armors;
-        this.weapon = weapon;
+        this.armors = gen.getArmors();
+        this.weapon = gen.getWeapon();
     }
+    
 
     public String getName() {
         return name;

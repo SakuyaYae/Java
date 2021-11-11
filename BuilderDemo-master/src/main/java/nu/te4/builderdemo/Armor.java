@@ -19,8 +19,15 @@ public class Armor {
         this.durability = gen.getDurability();
         this.defence = gen.getDefence();
     }
+    @Override
+    public String toString(){
+        String dur = Integer.toString(durability);
+        String def = Integer.toString(defence);
+        String res = name + " " + dur + " " + def;
+        return res;
+       }
     
-     public String getName() {
+    public String getName() {
         return name;
     }
 

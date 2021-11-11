@@ -64,9 +64,9 @@ public class Soldier_builder {
     }
     
         public Soldier build(){
-            if(name == null){throw new IllegalStateException("Weapon needs a name");}
-            if(health <= 0){throw new IllegalStateException("weapon cant have 0 or less durabilety");}
-            if(age < 20){age = 20;}
+            if(name == null){throw new IllegalStateException("Soldier needs a name");}
+            if(health <= 0){throw new IllegalStateException("Soldier cant have 0 or less health");}
+            if(age < 10){age = 10;}
         return new Soldier(this);
     }
 }

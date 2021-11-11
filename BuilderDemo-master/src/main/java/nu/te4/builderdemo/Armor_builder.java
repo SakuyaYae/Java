@@ -43,8 +43,8 @@ public class Armor_builder {
     }
    
     public Armor build(){
-        if(name == null){throw new IllegalStateException("Weapon needs a name");}
-        if(durability <= 0){throw new IllegalStateException("weapon cant have 0 or less durabilety");}
+        if(name == null){throw new IllegalStateException("Armor needs a name");}
+        if(durability <= 0){throw new IllegalStateException("Armor cant have 0 or less durabilety");}
         if(defence < 0){defence = 0;}
         return new Armor(this);
     }

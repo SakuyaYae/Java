@@ -22,7 +22,16 @@ public class Weapon {
         this.weight = gen.getWeight();
     }
            
-            
+    @Override
+    public String toString(){
+        String dur = Integer.toString(durability);
+        String str = Integer.toString(strength);
+        String wei = Double.toString(weight);
+        String res = name + " " + dur + " " + str + " " + wei;
+        return res;
+       }
+   
+   
     public String getName() {
         return name;
     }
