@@ -14,6 +14,9 @@ public class Main {
         int ticket = Ticket.get_instance().get_posision(); 
         System.out.println(ticket);
         System.out.println(Ticket.get_instance().get_posision());
-    
+        
+        Shape_factory create_shape = new Shape_factory();
+        Rectangale rec = (Rectangale)create_shape.getShape("RECTANGALE");
+        rec.draw();
     }
 }

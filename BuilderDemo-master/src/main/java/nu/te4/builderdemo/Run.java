@@ -66,10 +66,10 @@ public class Run {
         System.out.println("");
         System.out.println("");
         
-        System.out.println(String.format("%s %d, %d %s", dark.getName(), dark.getHealth(), dark.getAge(), dark.getWeapon().toString(),dark.getArmors() ));
+        System.out.println(String.format("%s %d, %d %s %s", dark.getName(), dark.getHealth(), dark.getAge(), dark.getWeapon().toString(),dark.getArmors().get(0).toString() ));
         System.out.println("");
-        System.out.println(String.format("%s %d, %d %s", empress.getName(), empress.getHealth(), empress.getAge(), empress.getWeapon().toString(), empress.getArmors() ));
+        System.out.println(String.format("%s %d, %d %s %s", empress.getName(), empress.getHealth(), empress.getAge(), empress.getWeapon().toString(), empress.getArmors().get(1).toString() ));
         System.out.println("");
-        System.out.println(String.format("%s %d, %d %s", sakura.getName(), sakura.getHealth(), sakura.getAge(), sakura.getWeapon().toString(), sakura.getArmors()));        
+        System.out.println(String.format("%s %d, %d %s %s", sakura.getName(), sakura.getHealth(), sakura.getAge(), sakura.getWeapon().toString(), sakura.getArmors().get(1).toString() ));        
     }
 }
