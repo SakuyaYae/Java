@@ -5,6 +5,8 @@
  */
 package sakura.sakuya.sorting;
 
+import java.util.Random;
+
 /**
  *
  * @author SakuyaYae
@@ -12,6 +14,19 @@ package sakura.sakuya.sorting;
 public class Main {
      public static void main(String[] args) {
          System.out.println("Sakura");
+         Random rand = new Random();
+         
+         int sakura[];
+         sakura = new int[10000];
+         
+         for(int i = 0; i < sakura.length; i++ ){
+            sakura[i] = rand.nextInt();
+         }
+         
+         
+         Bubble_sort bubbles = new Bubble_sort();
+         bubbles.bubble(sakura);
+         
      
      }
 }
