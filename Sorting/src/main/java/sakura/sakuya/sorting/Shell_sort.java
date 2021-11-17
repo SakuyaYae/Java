@@ -19,9 +19,9 @@ public class Shell_sort {
             for(int i = interval; i < yagyuu; i += 1){
                 int temp = sakura[i];
                 int x;
-                for(x = i; x >= interval && sakura[x - interval] > temp; x -= interval)
+                for(x = i; x >= interval && sakura[x - interval] > temp; x -= interval){
                     sakura[x] = sakura[x - interval];
-                    
+                }   
                 sakura[x] = temp;
             }  
         }
