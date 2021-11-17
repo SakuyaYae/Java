@@ -17,14 +17,16 @@ public class Main {
          Random rand = new Random();
          
          int sakura[];
-         sakura = new int[10000];
+         sakura = new int[10];
          
          for(int i = 0; i < sakura.length; i++ ){
             sakura[i] = rand.nextInt();
          }
          
-         
+         Insertion_sort insert = new Insertion_sort();
          Bubble_sort bubbles = new Bubble_sort();
+         
+         insert.Insertion_sorting(sakura);
          bubbles.bubble(sakura);
          
      
