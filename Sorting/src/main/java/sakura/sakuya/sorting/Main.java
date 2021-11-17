@@ -16,18 +16,25 @@ public class Main {
          System.out.println("Sakura");
          Random rand = new Random();
          
+         
          int sakura[];
          sakura = new int[10];
+         
+         int yuki = sakura.length;
+         
          
          for(int i = 0; i < sakura.length; i++ ){
             sakura[i] = rand.nextInt();
          }
-         
+         Shell_sort shell = new Shell_sort();
          Insertion_sort insert = new Insertion_sort();
          Bubble_sort bubbles = new Bubble_sort();
          
-         insert.Insertion_sorting(sakura);
+  
          bubbles.bubble(sakura);
+         insert.Insertion_sorting(sakura);
+         shell.shell_sorting(sakura, yuki);
+                     
          
      
      }
