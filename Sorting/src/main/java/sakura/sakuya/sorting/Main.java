@@ -38,7 +38,7 @@ public class Main {
         quicksort quick = new quicksort();
         
         Instant start = Instant.now();
-        bubbles.bubble(sakura); 
+        shell.shell_sorting(sakura, yuki); 
         Instant end = Instant.now();
         
         Duration timeElapsed = Duration.between(start, end);
@@ -46,9 +46,9 @@ public class Main {
         System.out.println(timeElapsed);
         
         
-        // 
-        // insert.Insertion_sorting(sakura);        
-        // shell.shell_sorting(sakura, yuki);         
+        // bubbles.bubble(sakura); not done
+        // insert.Insertion_sorting(sakura);    10Mil elemnt tid: 3H29M2.3276041S
+        //         
         // merge.Merge_sort(sakura, 0, yuki-1);
         // quick.quick_sorting(sakura, 0, yuki - 1);
         
