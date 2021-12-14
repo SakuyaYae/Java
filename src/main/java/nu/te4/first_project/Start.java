@@ -9,7 +9,10 @@ public class Start {
          Scanner input = new Scanner(System.in);
          Player one = new Player("Sakura",100000);
        Player two = new Player("Ganondorf",100000);
-         //
+       Large_sum sakura = new Large_sum();
+       
+       sakura.calc();
+       /*  
        while(true){
            System.out.println("  ");
             System.out.println(String.format("%s %d, %d",one.getName(),one.getDmg(),one.getHp() ));
@@ -34,6 +37,6 @@ public class Start {
             break;
            }
          
-       }
+       }*/
  }
 }
