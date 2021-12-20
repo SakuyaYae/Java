@@ -10,8 +10,10 @@ public class Start {
          Player one = new Player("Sakura",100000);
        Player two = new Player("Ganondorf",100000);
        Large_sum sakura = new Large_sum();
+       Largest_product yui = new Largest_product();
        
        sakura.calc();
+       yui.calc();
        /*  
        while(true){
            System.out.println("  ");

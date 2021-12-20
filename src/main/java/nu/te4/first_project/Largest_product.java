@@ -6,7 +6,6 @@
 package nu.te4.first_project;
 
 import java.io.File;
-import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -20,22 +19,30 @@ public class Largest_product {
         File numbers = new File("C:\\Users\\Elev\\Documents\\GitHub\\Java\\Large_product.txt");
         Scanner read = new Scanner(numbers);
         
-        String yuki[];
-        yuki = new String[1000];
-        
-        while(read.hasNextLine()){
-            int i = 0;
-            String number_from_file = read.next();
-            
-            yuki[i] = number_from_file;
-            i++;
+        int yuki[];
+        String data = "";
+        while(read.hasNext()){   
+            data += read.next();  
         }
-        
-        System.out.println();
+        yuki = new int[data.length()];
+        for (int i = 0; i < data.length(); i++) {
+            yuki[i] = Integer.parseInt(String.valueOf(data.charAt(i)));
+        }
+        long max_res = 0;
+        for(int i = 0; i < yuki.length-12; i++){
+            long res = 1;
+            for(int j = 0; j < 13; j++){
+                res *= yuki[i + j]; 
+            }
+            if(res > max_res){
+                max_res = res;
+            }
+        }
+        System.out.println(max_res);
         
         }
         catch(Exception e){
-            
+            System.out.println("error");
         }
    }
 
