@@ -14,8 +14,8 @@ public class Main {
         
         Linked_list sakura = new Linked_list();
         sakura.add_node(5);
-        sakura.add_node(4);
-        sakura.remove_node();
+        sakura.add_new_first_node(4);
+        sakura.remove_first_node();
         sakura.print();
     }
 }

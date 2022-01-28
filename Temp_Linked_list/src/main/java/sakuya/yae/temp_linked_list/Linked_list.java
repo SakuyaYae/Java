@@ -28,6 +28,20 @@ public class Linked_list {
         }
         node_count++;
     }
+    public void add_new_first_node(int data){
+        if(node_count == 0){
+            head = new Node(data);
+        }
+        else{
+            Node node = new Node(data);
+            Node pre_head = head;
+            head = node;
+            Node current_node = head;
+            current_node.next = pre_head;
+        }
+        node_count++;
+        }
+    
     
     public void remove_node(){
         if(node_count == 0){
@@ -39,6 +53,22 @@ public class Linked_list {
                 current_node = current_node.next;
             }
             current_node.next = null;
+            node_count--;
+        }
+    }
+    
+
+    public void remove_first_node(){
+        if(node_count == 0){
+            System.out.println("Error: cant remove node when there are none");
+        }
+        else{
+            Node pre_head = head;
+            Node new_head = head.next;
+            head = new_head;
+            head.next = new_head.next;
+
+            pre_head = null;
             node_count--;
         }
     }
