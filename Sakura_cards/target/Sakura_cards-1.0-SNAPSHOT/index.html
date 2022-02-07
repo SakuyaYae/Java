@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Sakura</h1>
+        <img src="Plumeria.jpg" alt="Plumeria from fire emblem"/>
+        <textarea id="text_area" rows="10" readonly cols="45"></textarea>
+        <textarea id="users" rows="10" readonly cols="20"></textarea>
+        <br>
+        <input type="text" id="msg" size="100">
+        <button id="button">send</button>
+        <br>
+        <br>
+        <button id="dice">Roll dice</button>
+        <div id="dice_roll"></div>
+        <script>
+         const url= "ws://localhost:8080/Example/Endpoint";   
+         const ws = new WebSocket(url);
+         var dice;
+         var dice_roll;
+         window.onload = main;
+         
+         function main(){
+            dice_roll = document.getElementById("dice_roll");
+            dice = document.getElementById("dice").onclick = roll_dice; 
+         }
+         
+         function roll_dice(){
+            var roll = Math.round(Math.random() * 5 + 1);
+            dice_roll.innerHTML = roll;
+         }
+         
+         function send(){
+             ws.send(msg.value);
+             msg.value = "";
+             
+         }
+         ws.addEventListener("message", event => {
+             const data = JSON.parse(event.data);
+             if(Array.isArray(data)){
+                 const output = data.map(d => d.username).join("\n");
+                 users.value = output;
+             }
+             else{
+                text_area.value += `${data.from}: ${data.message}\n`; 
+             }
+         });
+         button.addEventListener("click", send)
+        </script>
+    </body>
+</html>
