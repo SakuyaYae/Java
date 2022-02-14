@@ -22,7 +22,11 @@ public class Main {
         //low.divider();
         //OwO.chosen_diveder(20);
         
-        Fibonatci num = new Fibonatci();
-        System.out.println(num.number(-40));
+        //Fibonatci num = new Fibonatci();
+        //System.out.println(num.number(-40));
+        
+        Searcher ser = new Searcher();
+        ser.search();
+        ser.hdd_space_c();
     }
 }
