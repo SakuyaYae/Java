@@ -16,9 +16,13 @@ public class Main {
         //Locator locate = new Locator();
         //locate.calebration();
         
-        Low_divider low = new Low_divider();
-        Low_divider OwO  = new Low_divider();
-        low.divider();
-        OwO.chosen_diveder(20);
+        //Low_divider low = new Low_divider();
+        //Low_divider OwO  = new Low_divider();
+        
+        //low.divider();
+        //OwO.chosen_diveder(20);
+        
+        Fibonatci num = new Fibonatci();
+        System.out.println(num.number(-40));
     }
 }
